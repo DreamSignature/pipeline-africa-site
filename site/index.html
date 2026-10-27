@@ -328,6 +328,11 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 .foot .in { display: grid; gap: 10px; font-size: 14px; color: var(--band-muted); }
 .foot b { color: var(--on-band); font-family: var(--f-display); font-stretch: 80%; font-weight: 800; letter-spacing: .04em; font-size: 18px; }
 .foot b span { color: var(--band-accent); }
+.foot a { color: var(--band-accent); }
+.foot .by { font-family: var(--f-body); font-stretch: 100%; font-size: 14px; font-weight: 500; letter-spacing: 0; color: var(--band-muted); margin-left: 8px; white-space: nowrap; }
+.foot details summary { cursor: pointer; color: var(--on-band); font-weight: 600; width: fit-content; }
+.foot details[open] summary { margin-bottom: 6px; }
+.foot details p + p { margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -775,11 +780,18 @@ Action : renouvelez-la avant votre prochain dépôt.<span class="time">Lundi · 
 
 <footer class="foot">
   <div class="in">
-    <b>PIPELINE AFRICA</b>
+    <p><b>PIPELINE AFRICA</b><span class="by">un service de Dream Signature</span></p>
     <p>Veille des appels d'offres (État, bailleurs, ONU, ONG et entreprises privées), montage de dossiers, veille concurrentielle et prospection. Burkina Faso et Côte d'Ivoire, depuis Ouagadougou. Bientôt : Sénégal, Bénin, Togo, Mali, Niger et Cameroun.</p>
     <p>Exemples de cette page : avis réels publiés en 2026 au Burkina Faso et en Côte d'Ivoire, et résultats des Quotidiens des marchés publics n°4513 et n°4514 (DGCMEF, octobre 2026). Ils illustrent le service ; votre veille porte sur les avis du jour.</p>
     <p>WhatsApp : <a href="https://wa.me/22657469947?text=Bonjour%20PIPELINE%20AFRICA%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20veille%20des%20appels%20d%27offres." target="_blank" rel="noopener">+226&#160;57&#160;46&#160;99&#160;47</a> · E-mail : contact@dream-signature.com · Ouagadougou, Burkina Faso</p>
-    <p>© 2026 PIPELINE AFRICA</p>
+    <details>
+      <summary>Mentions légales</summary>
+      <p>Éditeur : Dream Signature Burkina, agence de marketing et de communication, Ouagadougou, Burkina Faso. Contact : WhatsApp +226&#160;57&#160;46&#160;99&#160;47, contact@dream-signature.com.</p>
+      <p>Hébergement : Netlify, Inc., États-Unis.</p>
+      <p>Propriété intellectuelle : les textes, le design, les images et les données de ce site sont protégés par le droit d'auteur. Toute reproduction, même partielle, sans autorisation écrite de Dream Signature est interdite.</p>
+      <p>Données personnelles : le formulaire n'enregistre rien sur ce site. Il prépare un message que vous envoyez vous-même par WhatsApp ou par e-mail. Vos informations servent uniquement à traiter votre demande.</p>
+    </details>
+    <p>© 2026 Dream Signature. PIPELINE AFRICA est une marque de Dream Signature. Tous droits réservés.</p>
   </div>
 </footer>
 
