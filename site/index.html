@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PIPELINE AFRICA</title>
+<meta name="description" content="Veille des appels d'offres au Burkina Faso et en Côte d'Ivoire : marchés publics, bailleurs, Nations unies, ONG et entreprises privées. Avis notés pour votre entreprise, alertes WhatsApp, montage de dossiers, veille concurrentielle et prospection.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PIPELINE AFRICA · Veille des appels d'offres">
+<meta property="og:description" content="Les appels d'offres faits pour vous, notés chaque matin. Burkina Faso et Côte d'Ivoire : État, bailleurs, ONU, ONG et entreprises privées. Alertes WhatsApp, montage de dossiers, concurrence, prospection.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://pipelineafrica-website.netlify.app/">
+<meta property="og:image" content="https://pipelineafrica-website.netlify.app/apercu.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PIPELINE AFRICA : les appels d'offres faits pour vous, notés chaque matin.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pipelineafrica-website.netlify.app/">
+<meta name="theme-color" content="#0f3d3b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F3D3B'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial Narrow,Arial,sans-serif' font-weight='800' font-size='30' fill='%23E8891C'%3EPA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<style>
+/* Mise en page : un bulletin de veille. Bandeau fixe, ouverture sur un fil d'avis notés (démonstration),
+   puis des rubriques : méthode et note sur 100, alertes, bordereau des prix des dossiers,
+   tableau des attributions, prospection, tarifs, questions, formulaire de demande vers WhatsApp. */
+:root {
+  /* Couleurs de Dream Signature : sarcelle profonde, orange, crème. */
+  --paper: #f8f4ee;
+  --card: #ffffff;
+  --ink: #10302e;
+  --muted: #536663;
+  --line: #e6ddcf;
+  --line-strong: #cdbfaa;
+  --accent: #0f3d3b;
+  --accent-soft: #e3eeec;
+  --on-accent: #ffffff;
+  --orange: #e8891c;
+  --orange-ink: #9a5608;
+  --on-orange: #0f3d3b;
+  --go: #1d7448;
+  --go-bg: #e1f3e8;
+  --mid: #8a5300;
+  --mid-bg: #fbefd8;
+  --no: #5d6a66;
+  --no-bg: #efe9df;
+  --band: #0f3d3b;
+  --on-band: #f3e9d8;
+  --band-muted: #a9c2be;
+  --band-line: #24524f;
+  --band-accent: #f09b2e;
+  --bubble: #edf4f3;
+  --err: #b4261c;
+  --focus: #0f3d3b;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", system-ui, sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --r: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b1e1d; --card: #112826; --ink: #ede6da; --muted: #a3b5b2; --line: #1f3a38; --line-strong: #2d4d4a;
+    --accent: #f09b2e; --accent-soft: #1d3533; --on-accent: #0b1e1d;
+    --orange: #f09b2e; --orange-ink: #f2a64a; --on-orange: #0b1e1d;
+    --go: #5ccc94; --go-bg: #12301f; --mid: #e8ad45; --mid-bg: #33260c; --no: #a2b1ab; --no-bg: #1a2f2d;
+    --band: #071615; --on-band: #ede6da; --band-muted: #9db3af; --band-line: #1c3533; --band-accent: #f09b2e;
+    --bubble: #15302e; --err: #ff8a7d; --focus: #f09b2e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0b1e1d; --card: #112826; --ink: #ede6da; --muted: #a3b5b2; --line: #1f3a38; --line-strong: #2d4d4a;
+  --accent: #f09b2e; --accent-soft: #1d3533; --on-accent: #0b1e1d;
+  --orange: #f09b2e; --orange-ink: #f2a64a; --on-orange: #0b1e1d;
+  --go: #5ccc94; --go-bg: #12301f; --mid: #e8ad45; --mid-bg: #33260c; --no: #a2b1ab; --no-bg: #1a2f2d;
+  --band: #071615; --on-band: #ede6da; --band-muted: #9db3af; --band-line: #1c3533; --band-accent: #f09b2e;
+  --bubble: #15302e; --err: #ff8a7d; --focus: #f09b2e; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--band); }
+a { color: var(--accent); }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.in { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+section { scroll-margin-top: 72px; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--orange-ink); }
+.h2 { font-family: var(--f-display); font-stretch: 80%; font-weight: 750; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; letter-spacing: -.005em; }
+.h3 { font-family: var(--f-display); font-stretch: 88%; font-weight: 700; font-size: 20px; line-height: 1.2; }
+.lead { font-size: 18px; color: var(--muted); max-width: 62ch; }
+.muted { color: var(--muted); }
+.small { font-size: 14px; }
+.sec { padding-block: 64px; display: block; }
+.sec + .sec { border-top: 1px solid var(--line); }
+.sec .in { display: grid; gap: 28px; }
+.head { display: grid; gap: 10px; max-width: 760px; }
+
+/* Boutons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 10px; padding: 12px 18px; font-weight: 700; text-decoration: none; cursor: pointer; border: 1.5px solid var(--accent); background: var(--accent); color: var(--on-accent); line-height: 1.2; text-align: center; }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.orange { background: var(--orange); border-color: var(--orange); color: var(--on-orange); }
+.btn.ghost-band { background: transparent; border-color: var(--on-band); color: var(--on-band); }
+.btn.small { padding: 8px 12px; font-size: 14px; border-radius: 8px; }
+.btn.line { background: var(--card); color: var(--ink); border-color: var(--line-strong); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+/* Bandeau */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--band); border-bottom: 1px solid var(--band-line); }
+.top .in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--on-band); min-width: 0; }
+.brand b { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: 22px; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.brand span { font-family: var(--f-mono); font-size: 11px; color: var(--band-accent); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.nav { display: flex; align-items: center; gap: 4px; }
+.nav a { color: var(--on-band); text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 10px; border-radius: 8px; }
+.nav a:hover { background: var(--band-line); }
+.nav a.btn { color: var(--on-orange); margin-left: 6px; padding: 9px 14px; }
+.nav a.btn:hover { background: var(--orange); }
+@media (max-width: 860px) { .nav a:not(.btn) { display: none; } .brand span { display: none; } }
+
+/* Ouverture */
+.hero { padding-block: 48px 64px; background: var(--band); color: var(--on-band); }
+.hero .eyebrow { color: var(--band-accent); }
+.hero .lead { color: var(--band-muted); }
+.hero :focus-visible { outline-color: var(--band-accent); }
+.hero .in { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+@media (max-width: 960px) { .hero .in { grid-template-columns: minmax(0, 1fr); gap: 36px; } }
+.hero-copy { display: grid; gap: 20px; align-content: start; padding-top: 8px; }
+.hero h1 { font-family: var(--f-display); font-stretch: 74%; font-weight: 800; font-size: clamp(38px, 6.4vw, 66px); line-height: .98; letter-spacing: -.012em; }
+.hero h1 em { font-style: normal; color: var(--band-accent); }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--band-line); margin-top: 8px; }
+.fact { padding: 14px 12px 0 0; display: grid; gap: 2px; }
+.fact b { font-family: var(--f-display); font-stretch: 80%; font-weight: 750; font-size: 19px; line-height: 1.15; }
+.fact span { font-size: 13.5px; color: var(--band-muted); }
+@media (max-width: 520px) { .facts { grid-template-columns: minmax(0, 1fr); } .fact { padding: 10px 0 0; } }
+
+/* Démonstration : fil d'avis */
+.feed { background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 14px; display: grid; gap: 12px; box-shadow: 0 24px 48px -30px rgba(0, 0, 0, .55); }
+.feed-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.feed-head .mono { font-size: 12.5px; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--line-strong); border-radius: 999px; overflow: hidden; background: var(--card); }
+.seg button { border: 0; background: transparent; padding: 7px 14px; font-weight: 600; font-size: 14px; cursor: pointer; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.notices { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+.notice { position: relative; border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 12px; background: var(--card); }
+.score { width: 50px; height: 50px; border-radius: 9px; display: grid; place-items: center; font-family: var(--f-display); font-stretch: 72%; font-weight: 800; font-size: 23px; font-variant-numeric: tabular-nums; }
+.r-GO { background: var(--go-bg); color: var(--go); }
+.r-MID { background: var(--mid-bg); color: var(--mid); }
+.notice .t { font-weight: 700; font-size: 15px; line-height: 1.3; overflow-wrap: anywhere; padding-right: 8px; }
+.notice:first-child .t { padding-right: 58px; }
+.notice .m { font-size: 13px; color: var(--muted); margin-top: 3px; }
+.notice .w { font-size: 13.5px; margin-top: 6px; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.pill { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 9px; white-space: nowrap; }
+.pill.lbl { background: var(--no-bg); color: var(--muted); font-weight: 500; }
+.stamp { position: absolute; top: -12px; right: 12px; border: 2.5px solid var(--go); color: var(--go); background: var(--card); font-family: var(--f-display); font-stretch: 85%; font-weight: 800; font-size: 19px; letter-spacing: .1em; padding: 1px 10px; border-radius: 6px; transform: rotate(-9deg); pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .stamp.land { animation: tampon .42s cubic-bezier(.2, .9, .3, 1.2) .25s both; }
+  @keyframes tampon { from { transform: rotate(-16deg) scale(1.7); opacity: 0; } to { transform: rotate(-9deg) scale(1); opacity: 1; } }
+}
+.feed-foot { font-size: 12.5px; color: var(--muted); }
+
+/* Méthode */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 900px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 8px; align-content: start; }
+.step .n { font-family: var(--f-mono); font-size: 12px; color: var(--orange-ink); letter-spacing: .1em; text-transform: uppercase; }
+.step p { font-size: 15px; color: var(--muted); }
+.rubric { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { .rubric { grid-template-columns: minmax(0, 1fr); } }
+.crit { display: grid; gap: 12px; }
+.crit-row { display: grid; grid-template-columns: minmax(0, 1fr) 46px; gap: 4px 12px; align-items: center; }
+.crit-row .lab { font-weight: 600; font-size: 15px; }
+.crit-row .lab small { display: block; font-weight: 400; color: var(--muted); font-size: 13.5px; }
+.crit-row .pts { font-family: var(--f-display); font-stretch: 75%; font-weight: 800; font-size: 24px; text-align: right; font-variant-numeric: tabular-nums; }
+.crit-row .bar { grid-column: 1 / -1; height: 8px; border-radius: 999px; background: var(--no-bg); overflow: hidden; }
+.crit-row .bar i { display: block; height: 100%; background: var(--orange); border-radius: 999px; }
+.thresholds { display: grid; gap: 10px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; }
+.th { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; align-items: center; font-size: 15px; }
+.th .chip { font-family: var(--f-display); font-stretch: 80%; font-weight: 800; font-size: 15px; text-align: center; border-radius: 8px; padding: 6px 4px; }
+
+/* Alertes WhatsApp */
+.chats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 860px) { .chats { grid-template-columns: minmax(0, 1fr); } }
+.chat { display: grid; gap: 8px; align-content: start; }
+.bubble { background: var(--bubble); color: var(--ink); border-radius: 16px 16px 16px 4px; padding: 14px 16px 10px; font-size: 15px; line-height: 1.5; white-space: pre-line; max-width: 520px; overflow-wrap: anywhere; }
+.bubble b { font-weight: 700; }
+.bubble .time { display: block; text-align: right; font-family: var(--f-mono); font-size: 11px; color: var(--muted); margin-top: 6px; white-space: normal; }
+
+/* Dossiers */
+.dos { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 900px) { .dos { grid-template-columns: minmax(0, 1fr); } }
+.tblwrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); }
+table { border-collapse: collapse; width: 100%; }
+caption { text-align: left; padding: 14px 16px 4px; font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+td.n { font-family: var(--f-mono); color: var(--muted); width: 1%; }
+td.p, th.p { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+td.p b { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: 20px; }
+td .d { font-weight: 700; display: block; }
+td .i { color: var(--muted); font-size: 14px; display: block; margin-top: 2px; }
+@media (max-width: 520px) { th, td { padding: 10px 10px; } td.p b { font-size: 17px; } }
+.terms { display: grid; gap: 6px; font-size: 14.5px; color: var(--muted); padding: 2px 4px; }
+.pieces { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 10px; }
+.pieces ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pieces li { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 10px; align-items: start; font-size: 15px; }
+.pieces li::before { content: ""; width: 14px; height: 14px; margin-top: 4px; border: 1.5px solid var(--go); border-radius: 3px; background: linear-gradient(135deg, transparent 0 40%, var(--go) 40% 60%, transparent 60%); }
+
+/* Concurrence (bande sombre) */
+.band { background: var(--band); color: var(--on-band); }
+.band .eyebrow { color: var(--band-accent); }
+.band .muted, .band .lead { color: var(--band-muted); }
+.band a { color: var(--band-accent); }
+.bigstat { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: end; }
+.bigstat .num { font-family: var(--f-display); font-stretch: 70%; font-weight: 800; font-size: clamp(64px, 11vw, 120px); line-height: .85; letter-spacing: -.02em; }
+.bigstat .num small { font-size: .42em; font-stretch: 80%; color: var(--band-muted); letter-spacing: 0; }
+@media (max-width: 560px) { .bigstat { grid-template-columns: minmax(0, 1fr); gap: 10px; } }
+.gaps { border: 1px solid var(--band-line); border-radius: var(--r); display: grid; grid-template-columns: minmax(0, 1fr); }
+.gap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 18px; padding: 12px 16px; border-bottom: 1px solid var(--band-line); align-items: center; }
+.gap:last-child { border-bottom: 0; }
+.gap .t { font-weight: 600; overflow-wrap: anywhere; }
+.gap .s { font-size: 13.5px; color: var(--band-muted); overflow-wrap: anywhere; }
+.gap .pc { font-family: var(--f-display); font-stretch: 75%; font-weight: 800; font-size: 28px; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gap .pc.tight { color: var(--band-accent); }
+.gets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .gets { grid-template-columns: minmax(0, 1fr); } }
+.get { border-top: 2px solid var(--band-accent); padding-top: 10px; display: grid; gap: 4px; }
+.get b { font-family: var(--f-display); font-stretch: 85%; font-size: 18px; }
+.get span { color: var(--band-muted); font-size: 15px; }
+.gets.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gets.four .get { align-content: start; }
+@media (max-width: 1100px) { .gets.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .gets.four { grid-template-columns: minmax(0, 1fr); } }
+.now { border: 1px solid var(--band-line); border-radius: var(--r); padding: 16px; display: grid; gap: 10px; }
+.now .ex-tag { color: var(--band-accent); }
+.now ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.now li { color: var(--on-band); }
+.refnote { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.refnote p { color: var(--band-muted); max-width: 62ch; flex: 1 1 320px; }
+.refnote .btn { flex: none; }
+
+/* Prospection */
+.pros { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { .pros { grid-template-columns: minmax(0, 1fr); } }
+.example { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 12px; }
+.ex-tag { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* Tarifs */
+.bill { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 1100px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .plans { grid-template-columns: minmax(0, 1fr); } }
+.plan { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 14px; align-content: start; }
+.plan h3 { font-family: var(--f-display); font-stretch: 80%; font-weight: 800; font-size: 26px; letter-spacing: .03em; color: var(--accent); }
+.plan .pitch { color: var(--muted); font-size: 15px; margin-top: -6px; }
+.price { font-family: var(--f-display); font-stretch: 74%; font-weight: 800; font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.price small { display: block; margin-top: 6px; font-family: var(--f-body); font-stretch: 100%; font-size: 14px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.per { font-size: 13.5px; color: var(--muted); min-height: 1.4em; }
+.incl { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 15px; }
+.incl li { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 10px; }
+.incl li::before { content: ""; width: 8px; height: 8px; margin-top: 8px; border-radius: 2px; background: var(--orange); }
+.plan .btn { width: 100%; }
+.svcs { display: grid; grid-template-columns: minmax(0, 1fr); background: var(--card); border: 1px solid var(--line); border-radius: var(--r); }
+.svc { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 6px 16px; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.svc:last-child { border-bottom: 0; }
+.svc .t { font-weight: 700; }
+.svc .s { color: var(--muted); font-size: 14px; }
+.svc .p { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: 20px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) { .svc { grid-template-columns: minmax(0, 1fr) auto; } .svc .btn { grid-column: 1 / -1; justify-self: start; } }
+
+/* Questions */
+.faq { display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--line); max-width: 860px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 16px 36px 16px 0; font-weight: 700; font-size: 17px; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 6px; top: 12px; font-family: var(--f-mono); font-size: 22px; color: var(--orange-ink); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 0 18px; color: var(--muted); max-width: 70ch; }
+
+/* Demande */
+.ask { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 900px) { .ask { grid-template-columns: minmax(0, 1fr); } }
+.form { background: var(--card); border: 1px solid var(--line-strong); border-radius: 14px; padding: 20px; display: grid; gap: 14px; }
+.fgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 640px) { .fgrid { grid-template-columns: minmax(0, 1fr); } }
+.f { display: grid; gap: 6px; min-width: 0; }
+.f.full { grid-column: 1 / -1; }
+.f label, .f legend { font-weight: 600; font-size: 14.5px; }
+.f small { color: var(--muted); font-size: 13px; }
+.req { color: var(--err); }
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select, textarea {
+  width: 100%; max-width: 100%; background: var(--card); border: 1px solid var(--line-strong); border-radius: 9px; padding: 11px 12px; font-size: 16px;
+}
+textarea { min-height: 92px; resize: vertical; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.checks { display: flex; flex-wrap: wrap; gap: 8px 18px; padding-top: 2px; }
+.checks label { display: flex; gap: 8px; align-items: center; font-weight: 500; font-size: 15px; }
+.checks input { width: 18px; height: 18px; accent-color: var(--accent); }
+.estimate { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; font-size: 15px; }
+.estimate b { font-variant-numeric: tabular-nums; }
+.err { color: var(--err); font-size: 14px; }
+.result { background: var(--card); border: 1.5px solid var(--go); border-radius: 14px; padding: 20px; display: grid; gap: 12px; }
+.result .h3 { color: var(--go); }
+.result textarea { min-height: 220px; font-family: var(--f-mono); font-size: 13.5px; line-height: 1.5; background: var(--paper); }
+.side { display: grid; gap: 16px; align-content: start; }
+.contact { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 12px; }
+.crow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; align-items: center; }
+.crow .k { font-size: 12px; font-family: var(--f-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); grid-column: 1 / -1; }
+.crow .v { font-weight: 700; font-size: 17px; overflow-wrap: anywhere; user-select: all; }
+
+/* Pied de page */
+.foot { padding-block: 32px 40px; background: var(--band); }
+.foot .in { display: grid; gap: 10px; font-size: 14px; color: var(--band-muted); }
+.foot b { color: var(--on-band); font-family: var(--f-display); font-stretch: 80%; font-weight: 800; letter-spacing: .04em; font-size: 18px; }
+.foot b span { color: var(--band-accent); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#accueil" data-go="accueil"><b>Pipeline Africa</b><span>Ouagadougou</span></a>
+    <nav class="nav" aria-label="Rubriques">
+      <a href="#veille" data-go="veille">La veille</a>
+      <a href="#dossiers" data-go="dossiers">Dossiers</a>
+      <a href="#concurrence" data-go="concurrence">Concurrence</a>
+      <a href="#tarifs" data-go="tarifs">Tarifs</a>
+      <a href="#questions" data-go="questions">Questions</a>
+      <a class="btn orange" href="#demande" data-choix="essai">Essai gratuit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="accueil" aria-labelledby="titre">
+    <div class="in">
+      <div class="hero-copy">
+        <p class="eyebrow">Appels d'offres · Burkina Faso · Côte d'Ivoire</p>
+        <h1 id="titre">Les appels d'offres faits pour vous, <em>notés chaque matin.</em></h1>
+        <p class="lead">Chaque jour ouvré, PIPELINE AFRICA lit les avis de l'État, des bailleurs, des agences des Nations unies, des ONG et des entreprises privées. Il les note sur 100 pour votre entreprise et vous envoie les meilleurs sur WhatsApp. Nous pouvons aussi monter vos dossiers, suivre vos concurrents et vous trouver des clients.</p>
+        <div class="actions">
+          <a class="btn orange" href="#demande" data-choix="essai">Essayer 14 jours gratuitement</a>
+          <a class="btn ghost-band" href="#tarifs" data-go="tarifs">Voir les tarifs</a>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>Chaque jour ouvré</b><span>État, bailleurs, ONU, ONG et entreprises privées</span></div>
+          <div class="fact"><b>Une note sur 100</b><span>Calculée pour votre métier, avec la raison</span></div>
+          <div class="fact"><b>Sur WhatsApp</b><span>Les GO le jour même, la synthèse le lundi</span></div>
+        </div>
+      </div>
+
+      <div class="feed" aria-label="Exemple de fil de veille">
+        <div class="feed-head">
+          <span class="mono" id="fil-titre">Exemple de veille réelle · Burkina Faso</span>
+          <div class="seg" role="group" aria-label="Métier de l'exemple">
+            <button type="button" data-metier="energie" aria-pressed="true">Énergie solaire</button>
+            <button type="button" data-metier="communication" aria-pressed="false">Communication</button>
+          </div>
+        </div>
+        <div class="notices" id="notices"></div>
+        <p class="feed-foot" id="fil-note">Avis réels publiés au Burkina Faso, notés pour une entreprise d'installation solaire et pour une agence de communication. Votre propre fil arrive chaque jour ouvré, noté pour votre métier.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="veille" aria-labelledby="t-veille">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">La veille</p>
+        <h2 class="h2" id="t-veille">Comment fonctionne la veille</h2>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step"><span class="n">Étape 1</span><h3 class="h3">Vous décrivez votre métier</h3><p>Secteurs, mots-clés, pays ciblés, montant minimum et mots à exclure. Un court échange suffit.</p></li>
+        <li class="step"><span class="n">Étape 2</span><h3 class="h3">Nous lisons les avis</h3><p>Chaque jour ouvré : le Quotidien des marchés publics et les sites des acheteurs publics, les projets des bailleurs, les agences des Nations unies sur UNGM, les ONG, les entreprises privées et la presse.</p></li>
+        <li class="step"><span class="n">Étape 3</span><h3 class="h3">Chaque avis est noté sur 100</h3><p>Pour votre entreprise, selon cinq critères. À partir de 75, c'est un GO.</p></li>
+        <li class="step"><span class="n">Étape 4</span><h3 class="h3">Vous recevez les GO</h3><p>Sur WhatsApp, avec la raison de la note et ce qu'il faut vérifier. Chaque lundi, la synthèse de la semaine.</p></li>
+      </ol>
+      <div class="rubric">
+        <div class="crit" aria-label="Les cinq critères de la note sur 100">
+          <h3 class="h3">La note sur 100</h3>
+          <div class="crit-row"><span class="lab">Métier<small>L'objet relève-t-il de votre cœur de métier ?</small></span><span class="pts">45</span><span class="bar"><i style="width:45%"></i></span></div>
+          <div class="crit-row"><span class="lab">Mots-clés<small>Vos mots dans l'intitulé et le résumé de l'avis</small></span><span class="pts">20</span><span class="bar"><i style="width:20%"></i></span></div>
+          <div class="crit-row"><span class="lab">Pays<small>Un pays où vous travaillez</small></span><span class="pts">15</span><span class="bar"><i style="width:15%"></i></span></div>
+          <div class="crit-row"><span class="lab">Accessibilité<small>Cotation, petit marché, ou gros dossier qui exige de lourdes références</small></span><span class="pts">10</span><span class="bar"><i style="width:10%"></i></span></div>
+          <div class="crit-row"><span class="lab">Délai<small>Le temps qui reste pour préparer l'offre</small></span><span class="pts">10</span><span class="bar"><i style="width:10%"></i></span></div>
+        </div>
+        <div class="thresholds">
+          <div class="th"><span class="chip r-GO">75 à 100</span><span><b>GO</b> : nous vous l'envoyons le jour même.</span></div>
+          <div class="th"><span class="chip r-MID">50 à 74</span><span><b>À étudier</b> : dans votre synthèse du lundi.</span></div>
+          <div class="th"><span class="chip pill lbl" style="font-size:15px">0 à 49</span><span>Nous ne vous dérangeons pas.</span></div>
+          <p class="muted small">Un mot que vous voulez exclure retire 40 points. Un montant sous votre minimum en retire 15.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="acheteurs" aria-labelledby="t-acheteurs">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Au-delà des marchés publics</p>
+        <h2 class="h2" id="t-acheteurs">L'ONU, les bailleurs, les ONG et les entreprises achètent aussi.</h2>
+        <p class="lead">Leurs avis sont dispersés : UNGM, sites des agences et des ONG, sites d'emploi, presse. Nous les lisons chaque jour ouvré et nous les notons pour votre métier, comme ceux de l'État. C'est inclus dans toutes les formules.</p>
+      </div>
+      <div class="gets four">
+        <div class="get"><b>Nations unies</b><span>FAO, UNICEF, PNUD, UNFPA, UNOPS, HCR… Leurs achats paraissent sur UNGM, souvent en demande de cotation.</span></div>
+        <div class="get"><b>Bailleurs et coopération</b><span>Projets de la Banque mondiale, de la BAD, de la BID et de l'Union européenne ; achats d'Enabel, de la GIZ ou de l'AFD.</span></div>
+        <div class="get"><b>ONG</b><span>Contrats-cadres, demandes de cotation et répertoires de fournisseurs des ONG présentes sur le terrain.</span></div>
+        <div class="get"><b>Entreprises privées</b><span>Mines, banques, télécoms, industries : appels d'offres et appels à référencement de fournisseurs.</span></div>
+      </div>
+      <div class="now">
+        <p class="ex-tag">Exemples d'avis réels</p>
+        <ul>
+          <li><b>FAO, Burkina Faso</b> : périmètre maraîcher équipé d'un forage et d'un pompage solaire, à Titao.</li>
+          <li><b>SONABEL, sur financement de la BID</b> : laboratoire de simulation de conduite du réseau électrique.</li>
+          <li><b>CARE International, Burkina Faso</b> : accords-cadres de deux ans pour la fourniture de denrées dans plusieurs régions.</li>
+          <li><b>GIZ, Côte d'Ivoire</b> : matériel informatique, imprimantes 3D et kits de découpe laser.</li>
+        </ul>
+        <p class="muted small">Relevés sur UNGM, sur le site de la Banque islamique de développement, sur Africarrières et sur Educarriere.</p>
+      </div>
+      <div class="refnote">
+        <p>Une partie des achats des ONG et des entreprises n'est jamais publiée : elle va aux fournisseurs déjà référencés. Nous repérons leurs appels à référencement et nous vous y inscrivons, ainsi que sur UNGM.</p>
+        <a class="btn orange small" href="#demande" data-choix="svc:referencement">Référencement fournisseur · 100&#8239;000 FCFA</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="alertes" aria-labelledby="t-alertes">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Sur votre téléphone</p>
+        <h2 class="h2" id="t-alertes">Ce que vous recevez sur WhatsApp</h2>
+        <p class="lead">Pas de plateforme à consulter : l'essentiel arrive là où vous lisez déjà vos messages.</p>
+      </div>
+      <div class="chats">
+        <div class="chat">
+          <p class="ex-tag">Alerte GO · exemple</p>
+          <div class="bubble"><b>PIPELINE AFRICA · GO 88/100</b>
+Acquisition et installation de kits solaires au profit des gagnants de la tombola de la LONAB
+Acheteur : Agence Faso Vêenem, Burkina Faso
+Pourquoi : fourniture et pose de kits solaires, votre cœur de métier.
+À vérifier : la date limite et les pièces exigées.
+Répondez DOSSIER et nous montons votre offre.<span class="time">Mardi · 07:12</span></div>
+        </div>
+        <div class="chat">
+          <p class="ex-tag">Synthèse du lundi · exemple</p>
+          <div class="bubble"><b>Votre semaine · Énergie solaire</b>
+• 16 avis GO, dont l'électrification solaire de la mairie de Poura et l'entretien de 10 mini-réseaux pour l'Agence Faso Vêenem.
+• Concurrence : un concurrent que vous suivez a remporté 2 lots de feux tricolores solaires à l'ONASER, pour 62,7 millions FCFA TTC au total.
+• Vos pièces : l'attestation CNSS expire dans 12 jours.
+Action : renouvelez-la avant votre prochain dépôt.<span class="time">Lundi · 07:30</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="dossiers" aria-labelledby="t-dossiers">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Montage de dossiers</p>
+        <h2 class="h2" id="t-dossiers">Nous montons vos dossiers</h2>
+        <p class="lead">Un dossier incomplet est écarté, même au meilleur prix. Nous réunissons les pièces, rédigeons l'offre et vérifions sa conformité avant le dépôt.</p>
+      </div>
+      <div class="dos">
+        <div style="display:grid;gap:12px">
+          <div class="tblwrap">
+            <table>
+              <caption>Bordereau des prix</caption>
+              <thead><tr><th>N°</th><th>Désignation</th><th class="p">Prix (FCFA)</th></tr></thead>
+              <tbody>
+                <tr><td class="n">1</td><td><span class="d">Dossier administratif</span><span class="i">Liste des pièces exigées, contrôle des dates de validité, classement prêt à déposer.</span></td><td class="p"><b>50&#8239;000</b></td></tr>
+                <tr><td class="n">2</td><td><span class="d">Offre complète, demande de prix ou cotation</span><span class="i">Dossier administratif, offre technique (méthodologie, planning, références), offre financière (bordereau des prix et devis), relecture avant dépôt.</span></td><td class="p"><b>250&#8239;000</b></td></tr>
+                <tr><td class="n">3</td><td><span class="d">Offre complète, appel d'offres ouvert</span><span class="i">Tout le contenu de l'offre complète, mémoire technique développé, suivi des éclaircissements et des additifs, dépôt accompagné.</span></td><td class="p"><b>500&#8239;000</b></td></tr>
+                <tr><td class="n">4</td><td><span class="d">Offre bailleurs (Banque mondiale, BAD, UE, ONU)</span><span class="i">Formulaires types du bailleur, mémoire technique et CV conformes, montage de groupement si nécessaire, relecture renforcée.</span></td><td class="p"><b>900&#8239;000</b></td></tr>
+                <tr><td class="n">5</td><td><span class="d">Relecture de conformité</span><span class="i">Pour une offre déjà rédigée : contrôle pièce par pièce contre le dossier d'appel d'offres, liste des corrections à faire.</span></td><td class="p"><b>75&#8239;000</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="terms">
+            <p><b>Option express</b>, dépôt dans 5 jours ouvrés ou moins : +50 %.</p>
+            <p><b>Paiement</b> : 50 % à la commande, 50 % à la remise du dossier.</p>
+            <p><b>Abonnés</b> : 15 % de remise sur chaque dossier.</p>
+          </div>
+          <div class="actions"><a class="btn" href="#demande" data-choix="dos:complet_dp">Demander un devis pour un dossier</a></div>
+        </div>
+        <div class="pieces">
+          <h3 class="h3">Les pièces que nous vérifions</h3>
+          <p class="muted small">Pièces usuelles au Burkina Faso. Chaque dossier d'appel d'offres fixe ses propres exigences.</p>
+          <ul>
+            <li>Registre du commerce (RCCM)</li>
+            <li>Certificat IFU</li>
+            <li>Attestation de situation fiscale</li>
+            <li>Attestation de situation cotisante (CNSS)</li>
+            <li>Attestation de l'Agence judiciaire du Trésor (AJT)</li>
+            <li>Attestation de l'inspection du travail</li>
+            <li>Certificat de non-faillite</li>
+            <li>Agrément technique, si l'avis l'exige</li>
+            <li>Caution de soumission, si l'avis l'exige</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="concurrence" aria-labelledby="t-conc">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Veille concurrentielle</p>
+        <div class="bigstat">
+          <span class="num">4<small> sur 12</small></span>
+          <h2 class="h2" id="t-conc">marchés se sont joués à moins de 1 % d'écart entre le gagnant et le deuxième.</h2>
+        </div>
+        <p class="lead">Les 20 et 21 octobre 2026, le Quotidien des marchés publics a publié 72 résultats. Pour 12 lots, il donne aussi le prix du deuxième : l'écart va de 0,6 % à 15 %. Savoir à quel prix gagnent vos concurrents change votre offre.</p>
+      </div>
+      <div class="gaps" aria-label="Écarts de prix entre le gagnant et le deuxième">
+        <div class="gap"><div><div class="t">Régie médiatique du Tour du Faso</div><div class="s">ONASER · 21&#8239;050&#8239;000 contre 21&#8239;175&#8239;000 FCFA HTVA</div></div><div class="pc tight">0,6 %</div></div>
+        <div class="gap"><div><div class="t">Plateau de sport et parking, lot 2</div><div class="s">CAMEG · 59&#8239;802&#8239;754 contre 60&#8239;267&#8239;072 FCFA TTC</div></div><div class="pc tight">0,8 %</div></div>
+        <div class="gap"><div><div class="t">Matériels informatiques</div><div class="s">SONATUR · 30&#8239;960&#8239;000 contre 31&#8239;227&#8239;300 FCFA HTVA</div></div><div class="pc tight">0,9 %</div></div>
+        <div class="gap"><div><div class="t">Appareil de mesure géophysique</div><div class="s">ONEA · 31&#8239;270&#8239;000 contre 31&#8239;565&#8239;000 FCFA TTC</div></div><div class="pc tight">0,9 %</div></div>
+        <div class="gap"><div><div class="t">Pièces de rechange électromécaniques</div><div class="s">ONEA · 230&#8239;000&#8239;000 contre 242&#8239;500&#8239;001 FCFA TTC</div></div><div class="pc">5,4 %</div></div>
+        <div class="gap"><div><div class="t">Feux tricolores solaires, lot 1</div><div class="s">ONASER · 37&#8239;245&#8239;000 contre 39&#8239;375&#8239;000 FCFA HTVA</div></div><div class="pc">5,7 %</div></div>
+      </div>
+      <div class="gets">
+        <div class="get"><b>Qui gagne dans votre secteur</b><span>Les attributaires, les lots, les montants, au fil des Quotidiens.</span></div>
+        <div class="get"><b>À quel prix</b><span>Les prix gagnants et l'écart avec les suivants, quand ils sont publiés.</span></div>
+        <div class="get"><b>Vos concurrents suivis</b><span>Chaque marché qu'ils remportent, dans votre synthèse du lundi.</span></div>
+      </div>
+      <p class="muted small">Sources : <a href="http://www.dgcmef.gov.bf/sites/default/files/2026-10/Quotidien%20N%C2%B04513.pdf" target="_blank" rel="noopener">Quotidien des marchés publics n°4513</a> et <a href="http://www.dgcmef.gov.bf/sites/default/files/2026-10/Quotidien%20n%C2%B04514.pdf" target="_blank" rel="noopener">n°4514</a> (DGCMEF). Incluse dans PIPELINE PRO, REVENUE DESK et PREMIUM, ou en rapport à la demande.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="prospection" aria-labelledby="t-pros">
+    <div class="in">
+      <div class="pros">
+        <div class="head">
+          <p class="eyebrow">Prospection</p>
+          <h2 class="h2" id="t-pros">Des clients, pas seulement des appels d'offres</h2>
+          <p class="lead">Une entreprise qui vient de gagner un marché cherche des sous-traitants et des fournisseurs. Chaque lundi, nous vous envoyons jusqu'à 5 prospects choisis pour votre métier, avec un premier message prêt à envoyer. Avec REVENUE DESK, nous les contactons pour vous et fixons les rendez-vous.</p>
+          <div class="actions"><a class="btn ghost" href="#tarifs" data-go="tarifs">Inclus dans PIPELINE PRO</a></div>
+        </div>
+        <div class="example">
+          <p class="ex-tag">Prospect de la semaine · exemple</p>
+          <p>Une entreprise de BTP vient de remporter la construction d'une maternité de CSPS : <b>22&#8239;656&#8239;000 FCFA TTC</b>, délai de 60 jours. Pour un électricien, le lot électricité et solaire est à proposer en sous-traitance.</p>
+          <div class="bubble">Bonjour, félicitations pour l'attribution de la construction de la maternité du CSPS. Nous réalisons les installations électriques et solaires des bâtiments : câblage, éclairage, kits solaires et onduleurs. Nous pouvons prendre ce lot en sous-traitance, dans le délai de 60 jours du marché. Seriez-vous disponible cette semaine pour un échange de 15 minutes ?<span class="time">Message prêt · à envoyer depuis votre téléphone</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="tarifs" aria-labelledby="t-tarifs">
+    <div class="in">
+      <div class="bill">
+        <div class="head">
+          <p class="eyebrow">Tarifs</p>
+          <h2 class="h2" id="t-tarifs">Choisissez votre formule</h2>
+        </div>
+        <div class="seg" role="group" aria-label="Période de paiement">
+          <button type="button" data-periode="mois" aria-pressed="true">Mensuel</button>
+          <button type="button" data-periode="an" aria-pressed="false">Annuel, 2 mois offerts</button>
+        </div>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>RADAR</h3>
+          <p class="pitch">La veille automatisée pour une entreprise.</p>
+          <div><div class="price" data-mois="100&#8239;000" data-an="1&#8239;000&#8239;000">100&#8239;000 <small>FCFA / mois</small></div><p class="per" data-mois="Essai gratuit de 14 jours." data-an="Soit 83&#8239;333 FCFA par mois.">Essai gratuit de 14 jours.</p></div>
+          <ul class="incl">
+            <li>Veille de chaque jour ouvré au Burkina Faso et en Côte d'Ivoire : État, bailleurs, ONU, ONG et entreprises privées</li>
+            <li>Avis notés sur 100 pour votre métier</li>
+            <li>Alertes GO sur WhatsApp</li>
+            <li>Synthèse du lundi et calendrier des dates limites</li>
+            <li>Suivi de vos pièces administratives et de leurs dates d'expiration</li>
+          </ul>
+          <a class="btn" href="#demande" data-choix="essai">Essayer 14 jours gratuitement</a>
+        </div>
+        <div class="plan">
+          <h3>PIPELINE PRO</h3>
+          <p class="pitch">Veille, concurrence et prospection.</p>
+          <div><div class="price" data-mois="350&#8239;000" data-an="3&#8239;500&#8239;000">350&#8239;000 <small>FCFA / mois</small></div><p class="per" data-mois="Pour répondre mieux et plus souvent." data-an="Soit 291&#8239;667 FCFA par mois.">Pour répondre mieux et plus souvent.</p></div>
+          <ul class="incl">
+            <li>Tout RADAR</li>
+            <li>Veille concurrentielle : qui gagne, à quel prix, chez quels acheteurs</li>
+            <li>Données acheteurs : leurs marchés, leurs montants, leurs exigences</li>
+            <li>5 prospects par semaine, avec un premier message prêt</li>
+            <li>Analyse détaillée des avis GO : atouts, risques, pièces, étapes</li>
+          </ul>
+          <a class="btn" href="#demande" data-choix="pipeline">Choisir PIPELINE PRO</a>
+        </div>
+        <div class="plan">
+          <h3>REVENUE DESK</h3>
+          <p class="pitch">La prospection faite pour vous.</p>
+          <div><div class="price" data-mois="850&#8239;000" data-an="8&#8239;500&#8239;000">850&#8239;000 <small>FCFA / mois</small></div><p class="per" data-mois="Nombre de places limité." data-an="Soit 708&#8239;333 FCFA par mois.">Nombre de places limité.</p></div>
+          <ul class="incl">
+            <li>Tout PIPELINE PRO</li>
+            <li>Nous contactons vos prospects, relançons et qualifions</li>
+            <li>Rendez-vous fixés dans votre agenda</li>
+            <li>Suivi commercial de chaque prospect</li>
+            <li>Chargé de compte dédié et revue mensuelle des résultats</li>
+          </ul>
+          <a class="btn" href="#demande" data-choix="revenue_desk">Parler de REVENUE DESK</a>
+        </div>
+        <div class="plan">
+          <h3>PREMIUM</h3>
+          <p class="pitch">REVENUE DESK pour les grandes entreprises.</p>
+          <div><div class="price" data-mois="Sur devis" data-an="Sur devis" data-unit="0">Sur devis</div><p class="per" data-mois="Plusieurs secteurs ou plusieurs pays." data-an="Plusieurs secteurs ou plusieurs pays.">Plusieurs secteurs ou plusieurs pays.</p></div>
+          <ul class="incl">
+            <li>Tout REVENUE DESK</li>
+            <li>Plusieurs secteurs et plusieurs pays</li>
+            <li>Prospection intensive</li>
+            <li>Veille concurrentielle avancée</li>
+            <li>Partenariats et groupements</li>
+            <li>Reporting pour la direction</li>
+          </ul>
+          <a class="btn" href="#demande" data-choix="premium">Demander un devis</a>
+        </div>
+      </div>
+      <div style="display:grid;gap:12px">
+        <h3 class="h3">Services à la demande</h3>
+        <div class="svcs">
+          <div class="svc"><div><div class="t">Référencement fournisseur</div><div class="s">Inscription sur UNGM, le portail des achats des Nations unies, et dans 3 répertoires de fournisseurs ouverts dans votre secteur (ONG, agences, entreprises).</div></div><div class="p">100&#8239;000</div><a class="btn small line" href="#demande" data-choix="svc:referencement">Demander</a></div>
+          <div class="svc"><div><div class="t">Recherche de partenaires et groupement</div><div class="s">Trois partenaires possibles, prise de contact, projet d'accord de groupement.</div></div><div class="p">150&#8239;000</div><a class="btn small line" href="#demande" data-choix="svc:partenaires">Demander</a></div>
+          <div class="svc"><div><div class="t">Rapport concurrentiel sectoriel</div><div class="s">Les attributions des 6 derniers mois dans votre secteur, les prix gagnants, les acheteurs à cibler.</div></div><div class="p">150&#8239;000</div><a class="btn small line" href="#demande" data-choix="svc:rapport_concurrence">Demander</a></div>
+          <div class="svc"><div><div class="t">Étude d'un acheteur</div><div class="s">Ses marchés récents, leurs attributaires, ses montants habituels et ses exigences.</div></div><div class="p">50&#8239;000</div><a class="btn small line" href="#demande" data-choix="svc:etude_acheteur">Demander</a></div>
+        </div>
+        <p class="muted small">Prix en FCFA. Paiement par Mobile Money ou par virement. Aucun dossier n'est inclus dans les abonnements ; tous les abonnés ont 15 % de remise sur les dossiers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="questions" aria-labelledby="t-faq">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Questions</p>
+        <h2 class="h2" id="t-faq">Questions fréquentes</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Quels pays couvrez-vous ?</summary><p>Le Burkina Faso et la Côte d'Ivoire aujourd'hui. Bientôt : le Sénégal, le Bénin, le Togo, le Mali, le Niger et le Cameroun. Pour l'un de ces pays, demandez-nous dès maintenant ce que nous pouvons déjà suivre.</p></details>
+        <details><summary>D'où viennent les avis ?</summary><p>De sources publiques : le Quotidien des marchés publics et les sites des acheteurs publics, les projets des bailleurs (Banque mondiale, BAD, BID, Union européenne, Enabel, GIZ), les agences des Nations unies sur UNGM, les ONG, les entreprises privées et la presse. Quand une date limite n'est pas publiée, nous l'indiquons comme à vérifier.</p></details>
+        <details><summary>Suivez-vous les achats des ONG et des entreprises privées ?</summary><p>Oui, tous ceux qu'elles publient : appels d'offres, demandes de cotation et appels à référencement. Une partie de leurs achats n'est jamais publiée et va aux fournisseurs déjà référencés. Avec le service Référencement fournisseur (100&#8239;000 FCFA), nous inscrivons votre entreprise sur UNGM, le portail des achats des Nations unies, et dans 3 répertoires de fournisseurs ouverts dans votre secteur.</p></details>
+        <details><summary>Comment recevez-vous les alertes ?</summary><p>Sur WhatsApp, au numéro de votre choix, avec la note, sa raison et ce qu'il faut vérifier. Chaque lundi, vous recevez aussi la synthèse de la semaine.</p></details>
+        <details><summary>Comment se passe l'essai gratuit ?</summary><p>Pendant 14 jours, vous recevez la veille RADAR pour votre entreprise. À la fin, vous choisissez une formule ou vous arrêtez, sans frais.</p></details>
+        <details><summary>Comment payer ?</summary><p>Par Mobile Money ou par virement. En payant à l'année, vous avez 2 mois offerts. Les dossiers ne sont pas inclus dans les abonnements, mais les abonnés ont 15 % de remise sur chaque dossier.</p></details>
+        <details><summary>Combien de temps faut-il pour monter un dossier ?</summary><p>Prévenez-nous dès que l'avis paraît. Si le dépôt a lieu dans 5 jours ouvrés ou moins, l'option express s'applique (+50 %). Le paiement se fait en deux fois : 50 % à la commande, 50 % à la remise du dossier.</p></details>
+        <details><summary>Garantissez-vous que je gagnerai ?</summary><p>Non, personne ne le peut : l'attribution revient à l'acheteur. Nous augmentons vos chances : plus d'avis repérés à temps, des dossiers complets et des prix situés par rapport à la concurrence.</p></details>
+        <details><summary>Mes informations restent-elles confidentielles ?</summary><p>Oui. Votre fiche, vos dossiers et vos prospects ne sont visibles que par notre équipe et ne sont jamais partagés avec d'autres clients.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="demande" aria-labelledby="t-demande">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Demande</p>
+        <h2 class="h2" id="t-demande">Faites votre demande</h2>
+        <p class="lead">Remplissez ce formulaire : votre demande est rédigée pour vous, il ne reste qu'à l'envoyer sur WhatsApp.</p>
+      </div>
+      <div class="ask">
+        <div>
+          <form class="form" id="dform" novalidate>
+            <div class="f full">
+              <label for="d-type">Votre demande <span class="req">*</span></label>
+              <select id="d-type" required>
+                <optgroup label="Abonnements">
+                  <option value="essai">Essai gratuit de 14 jours (RADAR)</option>
+                  <option value="radar">RADAR · 100&#8239;000 FCFA par mois</option>
+                  <option value="pipeline">PIPELINE PRO · 350&#8239;000 FCFA par mois</option>
+                  <option value="revenue_desk">REVENUE DESK · 850&#8239;000 FCFA par mois</option>
+                  <option value="premium">PREMIUM · sur devis</option>
+                </optgroup>
+                <optgroup label="Montage de dossiers">
+                  <option value="dos:administratif">Dossier administratif · 50&#8239;000 FCFA</option>
+                  <option value="dos:complet_dp">Offre complète, demande de prix ou cotation · 250&#8239;000 FCFA</option>
+                  <option value="dos:complet_aao">Offre complète, appel d'offres ouvert · 500&#8239;000 FCFA</option>
+                  <option value="dos:bailleurs">Offre bailleurs · 900&#8239;000 FCFA</option>
+                  <option value="dos:relecture">Relecture de conformité · 75&#8239;000 FCFA</option>
+                </optgroup>
+                <optgroup label="Services">
+                  <option value="svc:referencement">Référencement fournisseur · 100&#8239;000 FCFA</option>
+                  <option value="svc:partenaires">Recherche de partenaires et groupement · 150&#8239;000 FCFA</option>
+                  <option value="svc:rapport_concurrence">Rapport concurrentiel sectoriel · 150&#8239;000 FCFA</option>
+                  <option value="svc:etude_acheteur">Étude d'un acheteur · 50&#8239;000 FCFA</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="fgrid" id="d-dossier" hidden>
+              <div class="f full">
+                <label for="d-avis">Avis concerné <span class="req">*</span></label>
+                <input type="text" id="d-avis" placeholder="Référence ou intitulé, ex. DP n°2026-022/…">
+              </div>
+              <div class="f">
+                <label for="d-limite">Date limite de dépôt <span class="req">*</span></label>
+                <input type="date" id="d-limite">
+              </div>
+              <div class="f" style="align-content:end"><div class="estimate" id="d-estim" aria-live="polite">Indiquez la date limite pour voir le prix.</div></div>
+            </div>
+            <div class="fgrid">
+              <div class="f">
+                <label for="d-entreprise">Entreprise <span class="req">*</span></label>
+                <input type="text" id="d-entreprise" autocomplete="organization" required>
+              </div>
+              <div class="f">
+                <label for="d-nom">Nom et prénom <span class="req">*</span></label>
+                <input type="text" id="d-nom" autocomplete="name" required>
+              </div>
+              <div class="f">
+                <label for="d-tel">Téléphone WhatsApp <span class="req">*</span></label>
+                <input type="tel" id="d-tel" autocomplete="tel" placeholder="+226 …" required>
+              </div>
+              <div class="f">
+                <label for="d-mail">E-mail</label>
+                <input type="email" id="d-mail" autocomplete="email" placeholder="Facultatif">
+              </div>
+              <div class="f full">
+                <label for="d-secteurs">Votre métier <span class="req">*</span></label>
+                <input type="text" id="d-secteurs" placeholder="Ex. : énergie solaire et électricité, BTP, communication" required>
+                <small>Les secteurs et les mots qui décrivent ce que vous vendez.</small>
+              </div>
+              <fieldset class="f full">
+                <legend>Pays ciblés</legend>
+                <div class="checks">
+                  <label><input type="checkbox" id="d-bf" checked> Burkina Faso</label>
+                  <label><input type="checkbox" id="d-ci"> Côte d'Ivoire</label>
+                  <label><input type="checkbox" id="d-autre"> Autre pays</label>
+                </div>
+              </fieldset>
+              <div class="f full">
+                <label for="d-msg">Précisions</label>
+                <textarea id="d-msg" placeholder="Facultatif : vos références, un acheteur qui vous intéresse, une question…"></textarea>
+              </div>
+            </div>
+            <p class="err" id="d-err" role="alert" hidden></p>
+            <div class="actions"><button class="btn" type="submit">Préparer ma demande</button><span class="muted small">Rien n'est envoyé sans votre accord.</span></div>
+          </form>
+          <div class="result" id="d-result" hidden tabindex="-1">
+            <h3 class="h3">Votre demande est prête</h3>
+            <p class="muted small">Envoyez-la sur WhatsApp : le message s'ouvre déjà rédigé, il suffit d'appuyer sur Envoyer.</p>
+            <label class="muted small" for="d-texte">Votre message</label>
+            <textarea id="d-texte" readonly></textarea>
+            <div class="actions">
+              <a class="btn" id="d-wa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+              <button class="btn line" type="button" id="d-copy">Copier la demande</button>
+              <button class="btn ghost" type="button" id="d-edit">Modifier</button>
+            </div>
+            <p class="muted small">Pas de WhatsApp ? Copiez la demande et envoyez-la par e-mail à <b class="sel" id="d-mailto">contact@dream-signature.com</b>.</p>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="contact">
+            <h3 class="h3">Nous joindre</h3>
+            <div class="crow"><span class="k">WhatsApp</span><span class="v" id="c-wa">+226&#160;57&#160;46&#160;99&#160;47</span><button class="btn small line" type="button" data-copy="c-wa">Copier</button></div>
+            <div class="crow"><span class="k">E-mail</span><span class="v" id="c-mail">contact@dream-signature.com</span><button class="btn small line" type="button" data-copy="c-mail">Copier</button></div>
+            <div class="crow"><span class="k">Bureau</span><span class="v" style="user-select:text">Ouagadougou, Burkina Faso</span></div>
+            <a class="btn ghost" id="c-wa-link" href="https://wa.me/22657469947?text=Bonjour%20PIPELINE%20AFRICA%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20veille%20des%20appels%20d%27offres." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+          </div>
+          <p class="muted small">Votre demande arrive directement chez notre équipe. Nous vous répondons sur le numéro que vous indiquez.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <b>PIPELINE AFRICA</b>
+    <p>Veille des appels d'offres (État, bailleurs, ONU, ONG et entreprises privées), montage de dossiers, veille concurrentielle et prospection. Burkina Faso et Côte d'Ivoire, depuis Ouagadougou. Bientôt : Sénégal, Bénin, Togo, Mali, Niger et Cameroun.</p>
+    <p>Exemples de cette page : avis réels publiés en 2026 au Burkina Faso et en Côte d'Ivoire, et résultats des Quotidiens des marchés publics n°4513 et n°4514 (DGCMEF, octobre 2026). Ils illustrent le service ; votre veille porte sur les avis du jour.</p>
+    <p>WhatsApp : <a href="https://wa.me/22657469947?text=Bonjour%20PIPELINE%20AFRICA%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20veille%20des%20appels%20d%27offres." target="_blank" rel="noopener">+226&#160;57&#160;46&#160;99&#160;47</a> · E-mail : contact@dream-signature.com · Ouagadougou, Burkina Faso</p>
+    <p>© 2026 PIPELINE AFRICA</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  /* Coordonnées qui reçoivent les demandes. */
+  var CONTACT = { whatsapp: "+226 57 46 99 47", email: "contact@dream-signature.com" };
+  var WA_DIGITS = CONTACT.whatsapp.replace(/\D/g, "");
+
+  var OFFRES = {
+    essai: { nom: "Essai gratuit de 14 jours (RADAR)", prix: 0 },
+    radar: { nom: "Abonnement RADAR", prix: 100000, mensuel: true },
+    pipeline: { nom: "Abonnement PIPELINE PRO", prix: 350000, mensuel: true },
+    revenue_desk: { nom: "Abonnement REVENUE DESK", prix: 850000, mensuel: true },
+    premium: { nom: "Abonnement PREMIUM (sur devis)", prix: 0 },
+    "dos:administratif": { nom: "Dossier administratif", prix: 50000, dossier: true },
+    "dos:complet_dp": { nom: "Offre complète, demande de prix ou cotation", prix: 250000, dossier: true },
+    "dos:complet_aao": { nom: "Offre complète, appel d'offres ouvert", prix: 500000, dossier: true },
+    "dos:bailleurs": { nom: "Offre bailleurs (Banque mondiale, BAD, UE, ONU)", prix: 900000, dossier: true },
+    "dos:relecture": { nom: "Relecture de conformité", prix: 75000, dossier: true },
+    "svc:referencement": { nom: "Référencement fournisseur (UNGM et 3 répertoires)", prix: 100000 },
+    "svc:partenaires": { nom: "Recherche de partenaires et groupement", prix: 150000 },
+    "svc:rapport_concurrence": { nom: "Rapport concurrentiel sectoriel", prix: 150000 },
+    "svc:etude_acheteur": { nom: "Étude d'un acheteur", prix: 50000 }
+  };
+
+  /* Exemples de secours (avis réels publiés le 26 octobre 2026), notés pour deux métiers.
+     Affichés sans date quand fil.json est absent, invalide ou trop ancien. */
+  var FIL = {
+    energie: [
+      { s: 88, r: "GO", t: "Acquisition et installation de kits solaires au profit des gagnants de la tombola de la LONAB", a: "Agence Faso Vêenem", ty: "Fournitures et installation", w: "Fourniture et pose de kits solaires : votre cœur de métier, pour l'agence nationale du secteur." },
+      { s: 86, r: "GO", t: "Entretien et maintenance de 10 mini-réseaux isolés et réhabilitation d'infrastructures électriques", a: "Agence Faso Vêenem", ty: "Travaux", w: "Maintenance de mini-réseaux : un revenu récurrent sur votre métier." },
+      { s: 84, r: "GO", t: "Travaux d'électrification solaire des bâtiments de la mairie et travaux connexes", a: "Commune de Poura", ty: "Travaux", w: "Électrification solaire de bâtiments publics : votre cœur de métier." },
+      { s: 62, r: "MID", t: "Acquisition de pylônes, de câbles et d'accessoires de lignes HTB pour le déplacement de la ligne 90 kV", a: "SONABEL", ty: "Fournitures", w: "Matériel haute tension en gros volumes : les fabricants répondent souvent en direct." }
+    ],
+    communication: [
+      { s: 85, r: "GO", t: "Confection et installation de la gamme complète de signalétique au profit du CHU-YO", a: "CHU Yalgado Ouédraogo, Ouagadougou", ty: "Prestation de services", w: "Conception, impression et pose : prévoir l'équipe de pose pour un délai de 30 jours." },
+      { s: 76, r: "GO", t: "Base de données de fournisseurs et prestataires pour 2026, 2027 et 2028", a: "Agence burkinabè de la cinématographie et de l'audiovisuel", ty: "Référencement des fournisseurs", w: "Être référencé ouvre ses demandes de cotation pendant trois ans." },
+      { s: 68, r: "MID", t: "Base de données de prestataires et fournisseurs du Fonds d'appui au sport et à la presse privée", a: "Fonds d'appui au sport et à la presse privée", ty: "Référencement des fournisseurs", w: "Proche du secteur des médias, à étudier selon vos références." },
+      { s: 67, r: "MID", t: "Location de salles et de stands au profit du MESRI", a: "Ministère de l'Enseignement supérieur", ty: "Prestation de services", w: "Volet événementiel, mais marge limitée si la prestation se réduit à la location de salles." }
+    ]
+  };
+
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function fcfa(n) { var nb = String.fromCharCode(160); return Math.round(n).toLocaleString("fr-FR").replace(/[^0-9]/g, nb) + nb + "FCFA"; }
+  function $(id) { return document.getElementById(id); }
+
+  /* Fil d'avis */
+  var filMetier = "energie";
+  function renderFil(metier) {
+    filMetier = metier;
+    var list = FIL[metier] || FIL.energie;
+    $("notices").innerHTML = list.map(function (n, i) {
+      return '<article class="notice">' + (i === 0 ? '<span class="stamp land" aria-hidden="true">GO</span>' : "") +
+        '<div class="score r-' + n.r + '" title="Note sur 100">' + n.s + "</div>" +
+        '<div style="min-width:0"><div class="t">' + esc(n.t) + '</div><div class="m">' + esc(n.a) + "</div>" +
+        '<div class="pills"><span class="pill r-' + n.r + '">' + (n.r === "GO" ? "GO" : "À étudier") + '</span><span class="pill lbl">' + esc(n.ty) + "</span></div>" +
+        '<p class="w">' + esc(n.w) + "</p></div></article>";
+    }).join("");
+    document.querySelectorAll("[data-metier]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-metier") === metier)); });
+  }
+  document.querySelectorAll("[data-metier]").forEach(function (b) { b.addEventListener("click", function () { renderFil(b.getAttribute("data-metier")); }); });
+  renderFil("energie");
+
+  /* Fil de la semaine : fil.json, mis à jour chaque lundi par la veille, remplace les exemples s'il est valide.
+     Daté de 10 jours au plus, il s'affiche comme « Veille du … » ; plus ancien, la page reste sur « Exemple de veille réelle ». */
+  var MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+  function avisOk(n) {
+    return !!n && typeof n === "object" && typeof n.s === "number" && n.s >= 0 && n.s <= 100 && (n.r === "GO" || n.r === "MID") &&
+      ["t", "a", "ty", "w"].every(function (k) { return typeof n[k] === "string" && n[k].length > 0 && n[k].length <= 300; });
+  }
+  function listeOk(l) { return Array.isArray(l) && l.length >= 3 && l.length <= 6 && l.every(avisOk); }
+  function chargerFil() {
+    if (!window.fetch) return;
+    fetch("fil.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (!d || !/^\d{4}-\d{2}-\d{2}$/.test(String(d.date || "")) || !listeOk(d.energie) || !listeOk(d.communication)) return;
+      FIL = { energie: d.energie, communication: d.communication };
+      var p = d.date.split("-").map(Number), jour = new Date(p[0], p[1] - 1, p[2]);
+      var age = (Date.now() - jour.getTime()) / 864e5;
+      if (age >= -1 && age <= 10) {
+        var zone = typeof d.zone === "string" && d.zone.length > 0 && d.zone.length <= 60 ? d.zone : "Burkina Faso";
+        $("fil-titre").textContent = "Veille du " + (p[2] === 1 ? "1er" : p[2]) + " " + MOIS[p[1] - 1] + " " + p[0] + " · " + zone;
+        $("fil-note").textContent = "Avis réels en cours, notés pour une entreprise d'installation solaire et pour une agence de communication. Exemple mis à jour chaque semaine ; votre propre fil arrive chaque jour ouvré, noté pour votre métier.";
+      }
+      renderFil(filMetier);
+    }).catch(function () {});
+  }
+  chargerFil();
+
+  /* Période de paiement */
+  document.querySelectorAll("[data-periode]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var p = b.getAttribute("data-periode");
+      document.querySelectorAll("[data-periode]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      document.querySelectorAll(".price").forEach(function (el) { var v = el.getAttribute("data-" + p); el.innerHTML = el.getAttribute("data-unit") === "0" ? esc(v) : esc(v) + " <small>FCFA / " + (p === "an" ? "an" : "mois") + "</small>"; });
+      document.querySelectorAll(".per").forEach(function (el) { el.textContent = el.getAttribute("data-" + p); });
+    });
+  });
+
+  /* Navigation interne */
+  function goTo(id) { var el = $(id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("[data-go],[data-choix]"); if (!a) return;
+    e.preventDefault();
+    var choix = a.getAttribute("data-choix");
+    if (choix) { setType(choix); goTo("demande"); setTimeout(function () { try { $("d-entreprise").focus({ preventScroll: true }); } catch (x) {} }, 450); }
+    else goTo(a.getAttribute("data-go"));
+  });
+
+  /* Coordonnées */
+  function copier(text, btn) {
+    var done = function () { var t = btn.textContent; btn.textContent = "Copié"; setTimeout(function () { btn.textContent = t; }, 1600); };
+    var fallback = function () { btn.textContent = "Sélectionnez le texte"; setTimeout(function () { btn.textContent = "Copier"; }, 1800); };
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  }
+  document.querySelectorAll("[data-copy]").forEach(function (b) { b.addEventListener("click", function () { copier($(b.getAttribute("data-copy")).textContent.split(String.fromCharCode(160)).join(" "), b); }); });
+
+  /* Formulaire */
+  var form = $("dform");
+  function setType(v) { if (OFFRES[v]) { $("d-type").value = v; onType(); } showForm(); }
+  function onType() { var o = OFFRES[$("d-type").value]; $("d-dossier").hidden = !(o && o.dossier); estimer(); }
+  function joursOuvres(iso) {
+    var d = new Date(iso + "T00:00:00"); if (isNaN(d.getTime())) return null;
+    var t = new Date(); t.setHours(0, 0, 0, 0);
+    if (d <= t) return 0;
+    var n = 0, c = new Date(t.getTime());
+    while (c < d) { c.setDate(c.getDate() + 1); var w = c.getDay(); if (w !== 0 && w !== 6) n++; }
+    return n;
+  }
+  function devis() {
+    var o = OFFRES[$("d-type").value]; if (!o || !o.dossier) return null;
+    var lim = $("d-limite").value; if (!lim) return { o: o, jours: null };
+    var j = joursOuvres(lim); return { o: o, jours: j, express: j != null && j > 0 && j <= 5, prix: j != null && j > 0 && j <= 5 ? o.prix * 1.5 : o.prix };
+  }
+  function estimer() {
+    var d = devis(), el = $("d-estim"); if (!d) return;
+    if (d.jours == null) { el.textContent = "Indiquez la date limite pour voir le prix."; return; }
+    if (d.jours === 0) { el.innerHTML = "Date limite passée ou fixée à aujourd'hui : appelez-nous directement."; return; }
+    el.innerHTML = d.express ? "Dépôt dans " + d.jours + " jour" + (d.jours > 1 ? "s" : "") + " ouvré" + (d.jours > 1 ? "s" : "") + " : option express. Prix : <b>" + esc(fcfa(d.prix)) + "</b> au lieu de " + esc(fcfa(d.o.prix)) + "."
+      : "Dépôt dans " + d.jours + " jours ouvrés. Prix : <b>" + esc(fcfa(d.prix)) + "</b>.";
+  }
+  $("d-type").addEventListener("change", onType);
+  $("d-limite").addEventListener("change", estimer);
+  $("d-limite").addEventListener("input", estimer);
+
+  function val(id) { return $(id).value.trim(); }
+  function showForm() { form.hidden = false; $("d-result").hidden = true; }
+  $("d-edit").addEventListener("click", function () { showForm(); goTo("demande"); });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var o = OFFRES[$("d-type").value], err = [];
+    if (!val("d-entreprise")) err.push("le nom de l'entreprise");
+    if (!val("d-nom")) err.push("votre nom");
+    if (val("d-tel").replace(/\D/g, "").length < 8) err.push("un numéro WhatsApp complet");
+    if (!val("d-secteurs")) err.push("votre métier");
+    var d = devis();
+    if (o && o.dossier) {
+      if (!val("d-avis")) err.push("l'avis concerné");
+      if (!d || d.jours == null) err.push("la date limite de dépôt");
+      else if (d.jours === 0) err.push("une date limite à venir");
+    }
+    var mail = val("d-mail");
+    if (mail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)) err.push("une adresse e-mail valide, ou laissez le champ vide");
+    if (err.length) { $("d-err").textContent = "Il manque " + err.join(", ") + "."; $("d-err").hidden = false; return; }
+    $("d-err").hidden = true;
+    var pays = [["d-bf", "Burkina Faso"], ["d-ci", "Côte d'Ivoire"], ["d-autre", "autre pays (à préciser)"]].filter(function (p) { return $(p[0]).checked; }).map(function (p) { return p[1]; });
+    var lignes = ["Bonjour PIPELINE AFRICA,", "", "Demande : " + o.nom + (o.prix ? " (" + fcfa(o.prix) + (o.mensuel ? " par mois" : "") + ")" : "")];
+    if (o.dossier && d) {
+      var lim = new Date($("d-limite").value + "T00:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+      lignes.push("Avis : " + val("d-avis"));
+      lignes.push("Date limite de dépôt : " + lim + " (dans " + d.jours + " jour" + (d.jours > 1 ? "s" : "") + " ouvré" + (d.jours > 1 ? "s" : "") + ")");
+      if (d.express) lignes.push("Option express : " + fcfa(d.prix));
+    }
+    lignes.push("Entreprise : " + val("d-entreprise"));
+    lignes.push("Contact : " + val("d-nom") + ", " + val("d-tel") + (mail ? ", " + mail : ""));
+    lignes.push("Métier : " + val("d-secteurs"));
+    if (pays.length) lignes.push("Pays ciblés : " + pays.join(", "));
+    if (val("d-msg")) lignes.push("Précisions : " + val("d-msg"));
+    var texte = lignes.join("\n");
+    $("d-texte").value = texte;
+    $("d-wa").href = "https://wa.me/" + WA_DIGITS + "?text=" + encodeURIComponent(texte);
+    form.hidden = true; $("d-result").hidden = false;
+    try { $("d-result").focus({ preventScroll: true }); } catch (x) {}
+    goTo("demande");
+  });
+  $("d-copy").addEventListener("click", function () {
+    var b = $("d-copy"), ta = $("d-texte");
+    try { navigator.clipboard.writeText(ta.value).then(function () { b.textContent = "Copiée"; setTimeout(function () { b.textContent = "Copier la demande"; }, 1600); }, function () { ta.focus(); ta.select(); }); }
+    catch (e) { ta.focus(); ta.select(); }
+  });
+
+  /* Lien direct vers une rubrique (#tarifs, #demande…) */
+  var h = (location.hash || "").replace("#", "");
+  if (h && $(h)) setTimeout(function () { goTo(h); }, 60);
+})();
+</script>
+</body>
+</html>
