@@ -1,7 +1,15 @@
 {
- "date": "2026-10-27",
+ "date": "2026-10-28",
  "zone": "Burkina Faso",
  "energie": [
+  {
+   "s": 88,
+   "r": "GO",
+   "t": "Diverses acquisitions et installations au profit de la commune de Dori (lots 1 et 2)",
+   "a": "Commune de Dori (Région du Sahel)",
+   "ty": "Fourniture et installation",
+   "w": "Lampadaires et systèmes solaires pour une école et un CSPS : un petit marché au cœur de votre métier."
+  },
   {
    "s": 88,
    "r": "GO",
@@ -21,18 +29,10 @@
   {
    "s": 86,
    "r": "GO",
-   "t": "Travaux d'électrification rurale : entretien et maintenance de 10 mini-réseaux isolés (lot 1) et réhabilitation d'infrastructures électriques endommagées (lot 2)",
-   "a": "Agence Faso Vêenem",
-   "ty": "Travaux",
-   "w": "Maintenance de mini-réseaux : un revenu récurrent sur votre métier."
-  },
-  {
-   "s": 84,
-   "r": "GO",
-   "t": "Travaux d'électrification solaire des bâtiments de la mairie (lot 1) et travaux connexes",
-   "a": "Commune de Poura",
-   "ty": "Travaux",
-   "w": "Électrification solaire de bâtiments publics : votre cœur de métier."
+   "t": "Acquisition, installation et mise en service par la commune de Thiou de lampadaires solaires",
+   "a": "Commune de Thiou",
+   "ty": "Fourniture et installation",
+   "w": "Éclairage public solaire d'une commune : un marché accessible pour votre métier ; DAO à retirer à la mairie."
   }
  ],
  "communication": [
@@ -42,7 +42,7 @@
    "t": "Confection et installation de la gamme complète de signalétique au profit du CHU-YO",
    "a": "Centre Hospitalier Universitaire Yalgado Ouédraogo, Ouagadougou",
    "ty": "Prestation de services",
-   "w": "Conception, impression et pose : prévoir l'équipe de pose pour un délai de 30 jours."
+   "w": "Signalétique complète d'un CHU : conception, impression et pose, au cœur de votre métier."
   },
   {
    "s": 76,
@@ -50,7 +50,7 @@
    "t": "Constitution d'une base de données actualisée de fournisseurs et prestataires pour 2026, 2027 et 2028",
    "a": "Agence Burkinabè de la Cinématographie et de l'Audiovisuel",
    "ty": "Base de fournisseurs (AMI)",
-   "w": "Être référencé ouvre ses demandes de cotation en audiovisuel jusqu'en 2028."
+   "w": "Être référencé ouvre les demandes de cotation 2026-2028 de l'agence nationale de l'audiovisuel."
   },
   {
    "s": 68,
@@ -58,7 +58,7 @@
    "t": "Constitution d'une base de données de prestataires et fournisseurs pour le compte du Fonds d'Appui au Sport et à la Presse Privée",
    "a": "Fonds d'Appui au Sport et à la Presse Privée",
    "ty": "Base de fournisseurs (AMI)",
-   "w": "Proche du secteur des médias : à étudier selon vos références."
+   "w": "Référencement auprès d'un fonds proche des médias : une porte d'entrée pour votre métier."
   },
   {
    "s": 67,
@@ -66,7 +66,7 @@
    "t": "Location de salles et de stands au profit du MESRI",
    "a": "Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation",
    "ty": "Prestation de services",
-   "w": "Volet événementiel, mais marge limitée si la prestation se réduit à la location de salles."
+   "w": "Volet stands dans votre métier événementiel, marge limitée si l'offre se réduit aux salles."
   }
  ]
 }
