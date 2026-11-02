@@ -1,0 +1,72 @@
+{
+ "date": "2026-11-02",
+ "zone": "Burkina Faso",
+ "energie": [
+  {
+   "s": 90,
+   "r": "GO",
+   "t": "Acquisition et installation d'éclairage public solaire au profit de la commune de Komsilga",
+   "a": "Commune de Komsilga",
+   "ty": "Travaux",
+   "w": "Lampadaires solaires communaux, au cœur de votre métier : vérifiez quantités, spécifications et date limite."
+  },
+  {
+   "s": 90,
+   "r": "GO",
+   "t": "Travaux d'acquisition et d'installation de lampadaires solaires au profit de la commune de Péni",
+   "a": "Commune de Péni",
+   "ty": "Travaux",
+   "w": "Lampadaires solaires pour une commune : votre métier ; demandez le dossier pour la date limite."
+  },
+  {
+   "s": 90,
+   "r": "GO",
+   "t": "Acquisition et installation de 75 lampadaires solaires à Falagountou Centre",
+   "a": "Commune de Falagountou (province du Séno)",
+   "ty": "Travaux",
+   "w": "75 lampadaires solaires, au cœur de votre métier : vérifiez l'accès au site et la date limite."
+  },
+  {
+   "s": 88,
+   "r": "GO",
+   "t": "Acquisition et installation de dispositifs d'éclairage solaire et pose de plaques solaires",
+   "a": "Commune de Boromo",
+   "ty": "Travaux",
+   "w": "Éclairage et plaques solaires pour une commune : votre métier ; vérifiez quantités et date limite."
+  }
+ ],
+ "communication": [
+  {
+   "s": 85,
+   "r": "GO",
+   "t": "Confection et installation de la gamme complète de signalétique au profit du CHU-YO",
+   "a": "Centre Hospitalier Universitaire Yalgado Ouédraogo, Ouagadougou",
+   "ty": "Prestation de services",
+   "w": "Signalétique complète d'un CHU, de la conception à la pose : votre métier ; prévoyez une équipe de pose."
+  },
+  {
+   "s": 76,
+   "r": "GO",
+   "t": "Constitution d'une base de données actualisée de fournisseurs et prestataires pour 2026, 2027 et 2028",
+   "a": "Agence Burkinabè de la Cinématographie et de l'Audiovisuel",
+   "ty": "Base de fournisseurs (AMI)",
+   "w": "Être référencé ouvre ses demandes de cotation 2026-2028 en production audiovisuelle."
+  },
+  {
+   "s": 68,
+   "r": "MID",
+   "t": "Constitution d'une base de données de prestataires et fournisseurs pour le compte du Fonds d'Appui au Sport et à la Presse Privée",
+   "a": "Fonds d'Appui au Sport et à la Presse Privée",
+   "ty": "Base de fournisseurs (AMI)",
+   "w": "Un référencement au plus près du secteur des médias : vérifiez les catégories ouvertes."
+  },
+  {
+   "s": 67,
+   "r": "MID",
+   "t": "Location de salles et de stands au profit du MESRI",
+   "a": "Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation",
+   "ty": "Prestation de services",
+   "w": "Un volet stands à valoriser avec votre offre événementielle ; marge faible si seulement des salles."
+  }
+ ]
+}
