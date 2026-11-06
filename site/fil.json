@@ -3,12 +3,20 @@
   "zone": "Burkina Faso",
   "energie": [
     {
+      "s": 91,
+      "r": "GO",
+      "t": "Travaux de construction d'un mini-réseau solaire photovoltaïque de 60 kWc avec système de stockage dans la localité de Kaba, commune d'Arbollé (Passoré, région du Yaadga)",
+      "a": "Agence Faso Vêenem, Kaba (Arbollé)",
+      "ty": "Travaux",
+      "w": "Mini-réseau solaire de 60 kWc avec stockage, en plein dans votre métier : vérifiez références et agrément dans le DAO."
+    },
+    {
       "s": 90,
       "r": "GO",
-      "t": "Acquisition et installation d'éclairage public solaire au profit de la commune de Komsilga",
-      "a": "Commune de Komsilga",
+      "t": "Acquisition et installation de 75 lampadaires solaires à Falagountou Centre",
+      "a": "Commune de Falagountou (province du Séno)",
       "ty": "Travaux",
-      "w": "Lampadaires solaires communaux, au cœur de votre métier : vérifiez quantités, spécifications et date limite."
+      "w": "75 lampadaires solaires, au cœur de votre métier : vérifiez l'accès au site et la date limite."
     },
     {
       "s": 90,
@@ -21,18 +29,10 @@
     {
       "s": 90,
       "r": "GO",
-      "t": "Acquisition et installation de 75 lampadaires solaires à Falagountou Centre",
-      "a": "Commune de Falagountou (province du Séno)",
+      "t": "Acquisition et installation d'éclairage public solaire au profit de la commune de Komsilga",
+      "a": "Commune de Komsilga",
       "ty": "Travaux",
-      "w": "75 lampadaires solaires, au cœur de votre métier : vérifiez l'accès au site et la date limite."
-    },
-    {
-      "s": 88,
-      "r": "GO",
-      "t": "Acquisition et installation de dispositifs d'éclairage solaire et pose de plaques solaires",
-      "a": "Commune de Boromo",
-      "ty": "Travaux",
-      "w": "Éclairage et plaques solaires pour une commune : votre métier ; vérifiez quantités et date limite."
+      "w": "Lampadaires solaires communaux, au cœur de votre métier : vérifiez quantités, spécifications et date limite."
     }
   ],
   "communication": [
