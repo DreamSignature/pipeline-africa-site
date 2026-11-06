@@ -433,6 +433,26 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
 .copy{margin-top:36px;font:400 .84rem/1.4 var(--type);color:#8FA9A2}
 @media (max-width:800px){.foot-grid{grid-template-columns:1fr}}
 
+/* Mouvement */
+:root{interpolate-size:allow-keywords}
+#notices.loading{opacity:0}
+.score .sv{display:inline-block;min-width:2ch;text-align:center}
+.faq details::details-content{block-size:0;overflow:hidden;transition:block-size .32s var(--ease),content-visibility .32s allow-discrete}
+.faq details[open]::details-content{block-size:auto}
+.js .pv.pending .scale i{transform:scaleX(0)}
+.scale i{transform-origin:left center;transition:transform .9s var(--ease)}
+.pv .gap-row:nth-of-type(2) .scale i{transition-delay:.06s}.pv .gap-row:nth-of-type(3) .scale i{transition-delay:.12s}.pv .gap-row:nth-of-type(4) .scale i{transition-delay:.18s}.pv .gap-row:nth-of-type(5) .scale i{transition-delay:.24s}.pv .gap-row:nth-of-type(6) .scale i{transition-delay:.3s}.pv .gap-row:nth-of-type(7) .scale i{transition-delay:.36s}
+.crit .bar i{transition-delay:calc(var(--i,0)*70ms)}
+.typing{display:inline-flex;gap:4px;background:#fff;border-radius:2px 12px 12px 12px;padding:12px 14px;box-shadow:0 1px 1px rgba(0,0,0,.12)}
+.typing i{width:7px;height:7px;border-radius:50%;background:#8A9593;animation:dot 1s infinite ease-in-out}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.chat.waiting .bubble{display:none}
+.result{position:relative}
+.result .stamp{position:absolute;right:clamp(12px,3vw,28px);top:-6px;font-size:1.5rem}
+@media (max-width:600px){.result h3{padding-right:104px}}
+@media (prefers-reduced-motion:reduce){.faq details::details-content{transition:none}.scale i,.crit .bar i{transition:none}.typing i{animation:none}}
+
 /* Barre d'action mobile */
 .mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .45s var(--ease)}
 .mbar.on{transform:none}
@@ -491,7 +511,7 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
       <div class="sheet">
         <svg class="clip" viewBox="0 0 22 62" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 20V8a4 4 0 0 1 8 0v40a6 6 0 0 1-12 0V14"/></svg>
         <div class="feed-head"><span id="fil-titre">Exemple de veille réelle · Burkina Faso</span><span aria-hidden="true">Note / 100</span></div>
-        <div id="notices" aria-live="polite"></div>
+        <div id="notices" class="loading" aria-live="polite"></div>
         <p class="feed-foot" id="fil-note">Avis réels publiés au Burkina Faso, notés pour une entreprise d'installation solaire et pour une agence de communication. Votre propre fil arrive chaque jour ouvré, noté pour votre métier.</p>
       </div>
     </div>
@@ -520,10 +540,10 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
           <caption class="sr">Les cinq critères de la note et leurs points</caption>
           <tbody>
             <tr><td><b>Métier</b><small>L'objet relève-t-il de votre cœur de métier ?</small><div class="bar" aria-hidden="true"><i style="--v:45"></i></div></td><td class="pts num">45</td></tr>
-            <tr><td><b>Mots-clés</b><small>Vos mots dans l'intitulé et le résumé de l'avis</small><div class="bar" aria-hidden="true"><i style="--v:20"></i></div></td><td class="pts num">20</td></tr>
-            <tr><td><b>Pays</b><small>Un pays où vous travaillez</small><div class="bar" aria-hidden="true"><i style="--v:15"></i></div></td><td class="pts num">15</td></tr>
-            <tr><td><b>Accessibilité</b><small>Cotation, petit marché, ou gros dossier qui exige de lourdes références</small><div class="bar" aria-hidden="true"><i style="--v:10"></i></div></td><td class="pts num">10</td></tr>
-            <tr><td><b>Délai</b><small>Le temps qui reste pour préparer l'offre</small><div class="bar" aria-hidden="true"><i style="--v:10"></i></div></td><td class="pts num">10</td></tr>
+            <tr><td><b>Mots-clés</b><small>Vos mots dans l'intitulé et le résumé de l'avis</small><div class="bar" aria-hidden="true"><i style="--v:20;--i:1"></i></div></td><td class="pts num">20</td></tr>
+            <tr><td><b>Pays</b><small>Un pays où vous travaillez</small><div class="bar" aria-hidden="true"><i style="--v:15;--i:2"></i></div></td><td class="pts num">15</td></tr>
+            <tr><td><b>Accessibilité</b><small>Cotation, petit marché, ou gros dossier qui exige de lourdes références</small><div class="bar" aria-hidden="true"><i style="--v:10;--i:3"></i></div></td><td class="pts num">10</td></tr>
+            <tr><td><b>Délai</b><small>Le temps qui reste pour préparer l'offre</small><div class="bar" aria-hidden="true"><i style="--v:10;--i:4"></i></div></td><td class="pts num">10</td></tr>
           </tbody>
           <tfoot><tr><td>Total</td><td class="pts num">100</td></tr></tfoot>
         </table>
@@ -681,7 +701,7 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
     </div>
     <p class="lede soft">Les 20 et 21 octobre 2026, le Quotidien des marchés publics a publié 72 résultats. Pour 12 lots, il donne aussi le prix du deuxième : l'écart va de 0,6&#8239;% à 15&#8239;%. Savoir à quel prix gagnent vos concurrents change votre offre.</p>
 
-    <div class="sheet pv">
+    <div class="sheet pv pending" id="pv">
       <svg class="clip" viewBox="0 0 22 62" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 20V8a4 4 0 0 1 8 0v40a6 6 0 0 1-12 0V14"/></svg>
       <div class="pv-head"><b>Résultats d'attribution</b><span>Gagnant contre deuxième · écart</span></div>
       <div class="gap-row"><div><b>Régie médiatique du Tour du Faso</b><small>ONASER · <span class="num">21&#8239;050&#8239;000</span> contre <span class="num">21&#8239;175&#8239;000</span> FCFA HTVA</small></div><div class="scale" aria-hidden="true"><i style="--g:.6"></i></div><div class="pct num">0,6&#8239;%</div></div>
@@ -913,6 +933,7 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
           <div class="submit"><button class="btn btn-g" type="submit">Préparer ma demande</button><span>Rien n'est envoyé sans votre accord.</span></div>
         </form>
         <div class="result" id="d-result" hidden tabindex="-1">
+          <span class="stamp" id="d-stamp" aria-hidden="true">Prête</span>
           <h3>Votre demande est prête</h3>
           <p>Envoyez-la sur WhatsApp : le message s'ouvre déjà rédigé, il suffit d'appuyer sur Envoyer.</p>
           <div class="field" style="margin-top:16px">
@@ -1025,27 +1046,56 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
   }
   function watchStamp(el) { if (stampIO) { el.classList.add("pending"); stampIO.observe(el); } }
 
-  /* Fil d'avis */
-  var filMetier = "energie";
-  function renderFil(metier, animate) {
+  /* Fil d'avis : la veille du matin qui arrive, avis par avis, puis le tampon */
+  var EASE = "cubic-bezier(.16,1,.3,1)";
+  var CAN = !REDUCED && !!document.body.animate;
+  var filMetier = "energie", busy = false;
+  function countUp(el, to, delay) {
+    el.textContent = "0";
+    setTimeout(function () {
+      var t0 = performance.now(), d = 650;
+      (function step(t) { var k = Math.min(1, (t - t0) / d); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(t0);
+    }, delay);
+  }
+  function renderFil(metier, mode) {
     filMetier = metier;
-    var list = FIL[metier] || FIL.energie;
-    $("notices").innerHTML = list.map(function (n, i) {
+    var list = FIL[metier] || FIL.energie, box = $("notices");
+    box.innerHTML = list.map(function (n, i) {
       var go = n.r === "GO";
       return '<article class="notice">' + (i === 0 && go ? '<span class="stamp" aria-hidden="true">GO</span>' : "") +
-        '<div class="score r-' + n.r + '"><span class="sr">Note : </span>' + n.s + '<span class="sr"> sur 100, ' + (go ? "GO" : "à étudier") + "</span></div>" +
+        '<div class="score r-' + n.r + '"><span class="sr">Note : </span><span class="sv">' + n.s + '</span><span class="sr"> sur 100, ' + (go ? "GO" : "à étudier") + "</span></div>" +
         '<div style="min-width:0"><div class="t">' + esc(n.t) + '</div><div class="m">' + esc(n.a) + "</div>" +
         '<p class="w">' + esc(n.w) + '</p><span class="tag">' + esc(n.ty) + (go ? "" : " · À étudier") + "</span></div></article>";
     }).join("");
-    var st = $("notices").querySelector(".stamp");
-    if (st) {
-      if (animate && !REDUCED) { st.classList.add("landed"); }
-      else watchStamp(st);
-    }
+    box.classList.remove("loading");
     document.querySelectorAll("[data-metier]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-metier") === metier)); });
+    var st = box.querySelector(".stamp");
+    if (!mode || !CAN) { if (st && mode !== "static") watchStamp(st); return; }
+    var stagger = mode === "intro" ? 160 : 90, notes = box.querySelectorAll(".notice");
+    notes.forEach(function (el, i) {
+      el.animate([{ opacity: 0, transform: "translateY(-12px)", clipPath: "inset(0 0 100% 0)" }, { opacity: 1, transform: "none", clipPath: "inset(0 0 0 0)" }],
+        { duration: 520, delay: 120 + i * stagger, easing: EASE, fill: "backwards" });
+      var sv = el.querySelector(".sv"); countUp(sv, +sv.textContent, 160 + i * stagger);
+    });
+    if (st) { st.style.animationDelay = (120 + notes.length * stagger + 380) + "ms"; st.classList.add("landed"); }
   }
-  document.querySelectorAll("[data-metier]").forEach(function (b) { b.addEventListener("click", function () { renderFil(b.getAttribute("data-metier"), true); }); });
-  renderFil("energie");
+  document.querySelectorAll("[data-metier]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var m = b.getAttribute("data-metier");
+      if (m === filMetier || busy) return;
+      if (!CAN) { renderFil(m); return; }
+      busy = true;
+      var notes = $("notices").querySelectorAll(".notice"), last = null;
+      notes.forEach(function (el, i) { last = el.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(10px)" }], { duration: 160, delay: i * 25, easing: "ease-in", fill: "forwards" }); });
+      var box = $("notices"), h0 = box.offsetHeight; box.style.minHeight = h0 + "px";
+      var done = function () {
+        busy = false; renderFil(m, "swap");
+        var h1 = box.scrollHeight; box.style.minHeight = "";
+        if (h1 !== h0) box.animate([{ height: h0 + "px" }, { height: h1 + "px" }], { duration: 420, easing: EASE });
+      };
+      if (last) last.onfinish = done; else done();
+    });
+  });
 
   /* fil.json, mis à jour chaque lundi : remplace les exemples s'il est valide et récent */
   var MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
@@ -1054,6 +1104,9 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
       ["t", "a", "ty", "w"].every(function (k) { return typeof n[k] === "string" && n[k].length > 0 && n[k].length <= 300; });
   }
   function listeOk(l) { return Array.isArray(l) && l.length >= 3 && l.length <= 6 && l.every(avisOk); }
+  var introPlayed = false;
+  function intro() { if (introPlayed) return; introPlayed = true; renderFil(filMetier, "intro"); }
+  var introTimer = setTimeout(intro, 650);
   if (window.fetch) {
     fetch("fil.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
       if (!d || !/^\d{4}-\d{2}-\d{2}$/.test(String(d.date || "")) || !listeOk(d.energie) || !listeOk(d.communication)) return;
@@ -1065,8 +1118,25 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
         $("fil-titre").textContent = "Veille du " + (p[2] === 1 ? "1er" : p[2]) + " " + MOIS[p[1] - 1] + " " + p[0] + " · " + zone;
         $("fil-note").textContent = "Avis réels en cours, notés pour une entreprise d'installation solaire et pour une agence de communication. Exemple mis à jour chaque semaine ; votre propre fil arrive chaque jour ouvré, noté pour votre métier.";
       }
-      renderFil(filMetier);
-    }).catch(function () {});
+      if (introPlayed) renderFil(filMetier, "static");
+    }).catch(function () {}).then(function () { clearTimeout(introTimer); intro(); });
+  } else intro();
+
+  /* Les messages WhatsApp arrivent quand les téléphones entrent à l'écran */
+  if (CAN && "IntersectionObserver" in window) {
+    document.querySelectorAll(".phone .chat").forEach(function (chat, k) {
+      var bubble = chat.querySelector(".bubble"), typing = document.createElement("span");
+      typing.className = "typing"; typing.setAttribute("aria-hidden", "true"); typing.innerHTML = "<i></i><i></i><i></i>";
+      chat.classList.add("waiting"); chat.insertBefore(typing, bubble);
+      var io = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return; io.disconnect();
+        setTimeout(function () {
+          typing.remove(); chat.classList.remove("waiting");
+          bubble.animate([{ opacity: 0, transform: "scale(.9) translateY(6px)" }, { opacity: 1, transform: "none" }], { duration: 380, easing: EASE });
+        }, 1100 + k * 500);
+      }, { threshold: .55 });
+      io.observe(chat);
+    });
   }
 
   /* Autres tampons et grille de notation */
@@ -1076,14 +1146,28 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
     var cio = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { crit.classList.remove("pending"); cio.disconnect(); } }, { threshold: .35 });
     cio.observe(crit);
   } else crit.classList.remove("pending");
+  var pv = $("pv");
+  if (!REDUCED && "IntersectionObserver" in window) {
+    var pio = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { pv.classList.remove("pending"); pio.disconnect(); } }, { threshold: .3 });
+    pio.observe(pv);
+  } else pv.classList.remove("pending");
 
   /* Période de paiement */
   document.querySelectorAll("[data-periode]").forEach(function (b) {
     b.addEventListener("click", function () {
       var p = b.getAttribute("data-periode");
       document.querySelectorAll("[data-periode]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-      document.querySelectorAll(".price").forEach(function (el) { var v = el.getAttribute("data-" + p); el.innerHTML = el.getAttribute("data-unit") === "0" ? esc(v) : esc(v) + " <small>FCFA / " + (p === "an" ? "an" : "mois") + "</small>"; });
-      document.querySelectorAll(".per").forEach(function (el) { el.textContent = el.getAttribute("data-" + p); });
+      function swap() {
+        document.querySelectorAll(".price").forEach(function (el) { var v = el.getAttribute("data-" + p); el.innerHTML = el.getAttribute("data-unit") === "0" ? esc(v) : esc(v) + " <small>FCFA / " + (p === "an" ? "an" : "mois") + "</small>"; });
+        document.querySelectorAll(".per").forEach(function (el) { el.textContent = el.getAttribute("data-" + p); });
+      }
+      if (!CAN) { swap(); return; }
+      var els = document.querySelectorAll(".plan .price:not([data-unit]), .plan .per"), out = null;
+      els.forEach(function (el) { out = el.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(-35%)" }], { duration: 120, easing: "ease-in", fill: "forwards" }); });
+      out.onfinish = function () {
+        swap();
+        els.forEach(function (el, i) { var a = el.animate([{ opacity: 0, transform: "translateY(35%)" }, { opacity: 1, transform: "none" }], { duration: 260, delay: (i >> 1) * 40, easing: EASE, fill: "backwards" }); el.getAnimations().forEach(function (x) { if (x !== a) x.cancel(); }); });
+      };
     });
   });
 
@@ -1128,7 +1212,11 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
   /* Formulaire */
   var form = $("dform");
   function setType(v) { if (OFFRES[v]) { $("d-type").value = v; onType(); } showForm(); }
-  function onType() { var o = OFFRES[$("d-type").value]; $("d-dossier").hidden = !(o && o.dossier); estimer(); }
+  function onType() {
+    var o = OFFRES[$("d-type").value], row = $("d-dossier"), show = !!(o && o.dossier), was = !row.hidden;
+    row.hidden = !show; estimer();
+    if (show && !was && CAN) row.animate([{ opacity: 0, transform: "translateY(-8px)", clipPath: "inset(0 0 100% 0)" }, { opacity: 1, transform: "none", clipPath: "inset(0 0 0 0)" }], { duration: 300, easing: EASE });
+  }
   function joursOuvres(iso) {
     var d = new Date(iso + "T00:00:00"); if (isNaN(d.getTime())) return null;
     var t = new Date(); t.setHours(0, 0, 0, 0);
@@ -1196,6 +1284,11 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
     $("d-texte").value = texte;
     $("d-wa").href = "https://wa.me/" + WA_DIGITS + "?text=" + encodeURIComponent(texte);
     form.hidden = true; $("d-result").hidden = false;
+    var ds = $("d-stamp"); ds.classList.remove("landed");
+    if (CAN) {
+      $("d-result").animate([{ opacity: 0, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }], { duration: 320, easing: EASE });
+      void ds.offsetWidth; ds.style.animationDelay = "320ms"; ds.classList.add("landed");
+    }
     try { $("d-result").focus({ preventScroll: true }); } catch (x) {}
     goTo("demande");
   });
