@@ -1,5 +1,5 @@
 {
- "date": "2026-11-06",
+ "date": "2026-11-09",
  "zone": "Burkina Faso",
  "energie": [
   {
@@ -29,10 +29,10 @@
   {
    "s": 88,
    "r": "GO",
-   "t": "Acquisition et installation de dispositifs d'éclairage solaire et pose de plaques solaires",
-   "a": "Commune de Boromo",
-   "ty": "Travaux",
-   "w": "Éclairage et plaques solaires pour une commune : votre métier ; vérifiez quantités et date limite."
+   "t": "Diverses acquisitions et installations au profit de la commune de Dori (lots 1 et 2)",
+   "a": "Commune de Dori (Région du Sahel)",
+   "ty": "Fourniture et installation",
+   "w": "Du solaire pour une commune, petit marché accessible : votre métier ; demandez le dossier et la date limite."
   }
  ],
  "communication": [
